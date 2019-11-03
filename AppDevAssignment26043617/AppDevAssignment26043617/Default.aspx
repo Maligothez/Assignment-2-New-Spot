@@ -15,7 +15,7 @@
                 Log into the website to access our contents!
             </p>
             <p>
-                <a </a>
+                <a> </a>
             </p>
         </div>
         <div class="col-md-4">
@@ -24,7 +24,7 @@
                 
             </p>
             <p>
-                <a </a>
+                <a> </a>
             </p>
         </div>
         <div class="col-md-4">

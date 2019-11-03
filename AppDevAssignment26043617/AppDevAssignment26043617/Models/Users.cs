@@ -8,6 +8,7 @@ namespace AppDevAssignment26043617.Models
 {
     public class Users
     {
+        [Key]
         [ScaffoldColumn(false)]
         public int UserID { get; set; }
 

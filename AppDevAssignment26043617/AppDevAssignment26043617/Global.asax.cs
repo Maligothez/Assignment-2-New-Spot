@@ -20,6 +20,7 @@ namespace AppDevAssignment26043617
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
             // Initialize the product database.
+            Console.WriteLine("Testing");
             Database.SetInitializer(new Initialiser());
         }
     }
