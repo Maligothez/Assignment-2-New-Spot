@@ -9,7 +9,7 @@ namespace AppDevAssignment26043617.Models
     public class Results
     {
         [Required]
-        public string? UnitCode { get; set; }
+        public string UnitCode { get; set; }
 
         [Required]
         public virtual  Units Units { get; set; }
