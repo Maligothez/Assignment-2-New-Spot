@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using AppDevAssignment26043617.Models;
+using System.Web.ModelBinding;
 
 namespace AppDevAssignment26043617
 {
@@ -13,5 +15,20 @@ namespace AppDevAssignment26043617
         {
 
         }
+
+        public IQueryable<Result> GetResults([QueryString("id")] int? unitId)
+        {
+            var _db = new AppDevAssignment26043617.Models.ApplicationDbContext();
+            IQueryable<Result> query = _db.Results;
+            if (unitId.HasValue && unitId > 0)
+            {
+                query = query.Where(p => p.UnitId == unitId);
+            }
+            return query;
+        }
+
+
     }
+
+    
 }

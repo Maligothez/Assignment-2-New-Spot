@@ -11,14 +11,5 @@ namespace AppDevAssignment26043617 {
     
     
     public partial class ManageUnits {
-        
-        /// <summary>
-        /// unitList control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView unitList;
     }
 }
