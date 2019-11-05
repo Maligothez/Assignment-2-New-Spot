@@ -8,11 +8,7 @@
                 <h2><%: Page.Title %></h2>
             </hgroup>
 
-<<<<<<< HEAD
-            <asp:ListView ID="manageResultsView" runat="server" 
-=======
             <asp:ListView ID="manageResultsView" runat="server"
->>>>>>> origin/master
                 DataKeyNames="UnitId" GroupItemCount="4"
                 ItemType="AppDevAssignment26043617.Models.Units" SelectMethod="GetResults">
                 <EmptyDataTemplate>
