@@ -30,9 +30,8 @@
                         <table>
                             <tr>
                                 <td>
-                                    <a href="ManageResults.aspx?ResultId=<%#:Item.ResultId%>">
-                                        <img src="/Catalog/Images/Thumbs/<%#:Item.ImagePath%>"
-                                            width="100" height="75" style="border: solid" /></a>
+                                    <a href="ManageResults.aspx?ResultsID=<%#:Item.ResultsID%>">
+                                        
                                 </td>
                             </tr>
                             <tr>
