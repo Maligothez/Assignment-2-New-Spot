@@ -7,7 +7,7 @@
                 <h2><%: Page.Title %></h2>
             </hgroup>
 
-            <asp:ListView ID="manageResults" runat="server" 
+            <asp:ListView ID="manageResultsView" runat="server" 
                 DataKeyNames="UnitId" GroupItemCount="4"
                 ItemType="AppDevAssignment26043617.Models.Results" SelectMethod="GetUnit">
                 <EmptyDataTemplate>
