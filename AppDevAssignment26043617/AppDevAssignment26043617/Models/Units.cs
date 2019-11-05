@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AppDevAssignment26043617.Models
 {
-    public class Unit
+    public class Units
     {
         [Key]
         public int UnitId { get; set; }
@@ -23,7 +23,7 @@ namespace AppDevAssignment26043617.Models
 
         public byte[] UnitOutline { get; set; }
 
-        public virtual ICollection<Result> Results { get; set; }
+        public virtual ICollection<Results> Results { get; set; }
 
     }
 }
