@@ -13,7 +13,6 @@ namespace AppDevAssignment26043617.Models
         {
         }
 
-        public DbSet<Users> Users { get; set; }
         public DbSet<Units> Units { get; set; }
         public DbSet<Results> Results { get; set; }
 
