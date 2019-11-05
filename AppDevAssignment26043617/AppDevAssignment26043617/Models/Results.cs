@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AppDevAssignment26043617.Models
 {
-    public class Result
+    public class Results
     {
         [Key]
         public int ResultsID { get; set; }
@@ -14,7 +15,7 @@ namespace AppDevAssignment26043617.Models
         [Required]
         public int UnitId { get; set; }
         [Required]
-        public virtual Unit Unit { get; set; }
+        public virtual Units Units { get; set; }
 
         [Required, Display(Name = "Student ID")]
         public int StudentID { get; set; }
@@ -37,9 +38,22 @@ namespace AppDevAssignment26043617.Models
         [Required, Display(Name = "Exam Score")]
         public int Exam { get; set; }
 
+        [NotMapped] public int UnitScore => Convert.ToInt32((Assessment1Score + Assessment2Score + Exam) / 3);
 
-
-
+        public string Grade
+        {
+            get
+            {
+                if (UnitScore < 60)
+                    return "N";
+                else if (UnitScore < 80)
+                    return "Cr";
+                else
+                {
+                    return "HD";
+                }
+            }
+        }
 
     }
 }

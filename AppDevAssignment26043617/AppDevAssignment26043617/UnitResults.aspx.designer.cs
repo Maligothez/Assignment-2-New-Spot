@@ -11,16 +11,16 @@ namespace AppDevAssignment26043617
 {
 
 
-    public partial class ManageResults
+    public partial class UnitResults
     {
 
         /// <summary>
-        /// manageResultsView control.
+        /// unitResultsView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView manageResultsView;
+        protected global::System.Web.UI.WebControls.ListView unitResultsView;
     }
 }

@@ -9,7 +9,6 @@ using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
 using System.Linq;
 using AppDevAssignment26043617.Models;
-using Unit = AppDevAssignment26043617.Models.Unit;
 
 namespace AppDevAssignment26043617
 {
@@ -75,10 +74,10 @@ namespace AppDevAssignment26043617
 
         }
 
-        public IQueryable<Unit> GetUnits()
+        public IQueryable<Units> GetUnits()
         {
             var _db = new AppDevAssignment26043617.Models.ApplicationDbContext();
-            IQueryable<Unit> query = _db.Units;
+            IQueryable<Units> query = _db.Units;
             return query;
         }
 

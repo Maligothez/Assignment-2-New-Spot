@@ -185,6 +185,7 @@
     <Content Include="Account\Web.config" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Images\ecuicon.png" />
+    <Content Include="UnitResults.aspx" />
     <Content Include="ManageResults.aspx" />
     <Content Include="ManageUnits.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -349,6 +350,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="UnitResults.aspx.cs">
+      <DependentUpon>UnitResults.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UnitResults.aspx.designer.cs">
+      <DependentUpon>UnitResults.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ManageResults.aspx.cs">
       <DependentUpon>ManageResults.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -365,9 +373,9 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Initialiser.cs" />
-    <Compile Include="Models\Result.cs" />
+    <Compile Include="Models\Results.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
-    <Compile Include="Models\Unit.cs" />
+    <Compile Include="Models\Units.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Users.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

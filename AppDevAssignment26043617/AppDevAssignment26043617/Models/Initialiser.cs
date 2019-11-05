@@ -39,18 +39,18 @@ namespace AppDevAssignment26043617.Models
             return users;
         }
 
-        public static List<Unit> GetUnits()
+        public static List<Units> GetUnits()
         {
-            var units = new List<Unit> {
-                new Unit
+            var units = new List<Units> {
+                new Units
                 {
                     UnitId = 1,
                     UnitCode = "10654",
                     UnitTitle = "Advanced Bread and Buttery",
                     UnitCoordinator = "Fred Bread",
-                    Results = new List<Result>
+                    Results = new List<Results>
                     {
-                        new Result
+                        new Results
                         {
                             //UnitCode = "10654",
                             UnitId = 1,
@@ -62,7 +62,7 @@ namespace AppDevAssignment26043617.Models
                             Exam = 54
 
                         },
-                        new Result
+                        new Results
                         {
                             StudentID = 6523,
                             Semester = 2,
@@ -73,15 +73,15 @@ namespace AppDevAssignment26043617.Models
                         }
                     }
                 },
-                new Unit
+                new Units
                 {
                     UnitId = 2,
                     UnitCode = "CSI655",
                     UnitTitle = "Dog Hidery",
                     UnitCoordinator = "Spot",
-                    Results = new List<Result>
+                    Results = new List<Results>
                     {
-                        new Result
+                        new Results
                         {
                             //UnitCode = "CSI655",
                             UnitId = 2,

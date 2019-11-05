@@ -9,18 +9,22 @@ using System.Web.ModelBinding;
 
 namespace AppDevAssignment26043617
 {
-    public partial class ManageResults : System.Web.UI.Page
+    public partial class UnitResults : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        public IQueryable<Units> GetResults()
+        public IQueryable<Results> GetResults([QueryString("id")] int? unitId)
         {
             var _db = new ApplicationDbContext();
 
-            IQueryable<Units> query = _db.Units;
+            IQueryable<Results> query = _db.Results;
+            if (unitId.HasValue && unitId > 0)
+            {
+                query = query.Where(p => p.UnitId == unitId);
+            }
 
             return query;
         }
