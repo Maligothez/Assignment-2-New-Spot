@@ -13,6 +13,11 @@
                 </td>
                 <td>
                     <asp:TextBox runat="server" ID="UnitCodeBox" Width="100%"></asp:TextBox>
+                        <asp:RegularExpressionValidator  
+                             ID="RegexValidatorUnitCode" runat="server" ControlToValidate="UnitCodeBox"  
+                ForeColor="Red" Display="Dynamic" ErrorMessage="Please enter a valid  3 letter, 4 number unit code. Eg: CS12016"  
+                ValidationExpression="[A-Za-z]{3}[0-9]{4}">  
+            </asp:RegularExpressionValidator>
                 </td>
             </tr>
             <tr>

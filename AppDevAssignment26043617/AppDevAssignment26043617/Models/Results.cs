@@ -17,7 +17,7 @@ namespace AppDevAssignment26043617.Models
         [Required]
         public virtual Units Units { get; set; }
 
-        [Required, Display(Name = "Student ID")]
+        [Required ,Display(Name = "Student ID")]
         public int StudentID { get; set; }
 
         [Display(Name = "Student Photo")]

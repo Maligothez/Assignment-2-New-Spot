@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AppDevAssignment26043617
-{
-
-
-    public partial class ManageUnit
-    {
-
+namespace AppDevAssignment26043617 {
+    
+    
+    public partial class ManageUnit {
+        
         /// <summary>
         /// unitCodeLabel control.
         /// </summary>
@@ -22,7 +20,7 @@ namespace AppDevAssignment26043617
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label unitCodeLabel;
-
+        
         /// <summary>
         /// UnitTitleBox control.
         /// </summary>
@@ -31,7 +29,16 @@ namespace AppDevAssignment26043617
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox UnitTitleBox;
-
+        
+        /// <summary>
+        /// titleValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator titleValidator;
+        
         /// <summary>
         /// CoordinatorBox control.
         /// </summary>
@@ -40,7 +47,7 @@ namespace AppDevAssignment26043617
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox CoordinatorBox;
-
+        
         /// <summary>
         /// btnSave control.
         /// </summary>
@@ -49,7 +56,7 @@ namespace AppDevAssignment26043617
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSave;
-
+        
         /// <summary>
         /// btnDelete control.
         /// </summary>
@@ -58,7 +65,7 @@ namespace AppDevAssignment26043617
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnDelete;
-
+        
         /// <summary>
         /// btnCancel control.
         /// </summary>

@@ -9,6 +9,8 @@
         </div>
         <div>
             <h3><asp:Label runat="server" ID="unitCodeLabel"></asp:Label></h3>
+         
+
         </div>
         <br />
         <table width="100%">
@@ -17,6 +19,9 @@
                 </td>
                 <td>
                     <asp:TextBox runat="server" ID="UnitTitleBox" Width="100%"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="titleValidator" runat="server" 
+                         ControlToValidate="UnitTitleBox" ForeColor="Red" 
+                        ToolTip="Please enter the Unit title" Display="Dynamic">*</asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
