@@ -32,7 +32,7 @@
                 <td>Student ID
                 </td>
                 <td>
-                    <asp:TextBox runat="server" ID="StudentIdBox" Width="100%"></asp:TextBox>
+                    <asp:TextBox runat="server" ID="StudentIdBox" Width="100%" TextMode="Number"></asp:TextBox>
 
                     <asp:RequiredFieldValidator ID="studentValidator" runat="server" TextMode="Number"
                         ControlToValidate="StudentIdBox" ForeColor="Red"
@@ -72,7 +72,7 @@
                 <td>Year
                 </td>
                 <td>
-                    <asp:TextBox runat="server" ID="YearBox" Width="100%"></asp:TextBox>
+                    <asp:TextBox runat="server" ID="YearBox" Width="100%" TextMode="Number"></asp:TextBox>
 
                     <asp:RequiredFieldValidator ID="YearRequiredValidator" runat="server"
                         ControlToValidate="YearBox" ForeColor="Red"
@@ -92,7 +92,7 @@
                 <td>Assessment 1
                 </td>
                 <td>
-                    <asp:TextBox runat="server" ID="Assessment1Box" Width="100%"></asp:TextBox>
+                    <asp:TextBox runat="server" ID="Assessment1Box" Width="100%" TextMode="Number"></asp:TextBox>
 
                     <asp:RequiredFieldValidator ID="Asses1Validator" runat="server"
                         ControlToValidate="Assessment1Box" ForeColor="Red"
@@ -109,7 +109,7 @@
                 <td>Assessment 2
                 </td>
                 <td>
-                    <asp:TextBox runat="server" ID="Assessment2Box" Width="100%"></asp:TextBox>
+                    <asp:TextBox runat="server" ID="Assessment2Box" Width="100%" TextMode="Number"></asp:TextBox>
 
                     <asp:RequiredFieldValidator ID="Assess2Validator" runat="server"
                         ControlToValidate="Assessment2Box" ForeColor="Red"
@@ -127,7 +127,7 @@
                 <td>Exam
                 </td>
                 <td>
-                    <asp:TextBox runat="server" ID="ExamBox" Width="100%"></asp:TextBox>
+                    <asp:TextBox runat="server" ID="ExamBox" Width="100%" TextMode="Number"></asp:TextBox>
 
                     <asp:RequiredFieldValidator ID="ExamValidate" runat="server"
                         ControlToValidate="ExamBox" ForeColor="Red"
@@ -144,7 +144,7 @@
                 <td>Outline
                 </td>
                 <td>
-                    <asp:FileUpload runat="server" ID="StudentPhoto" accept=".png,.jpg,.jpeg,.gif"/>
+                    <asp:FileUpload runat="server" ID="StudentPhoto" accept=".png,.jpg,.jpeg,.gif" />
                 </td>
             </tr>
         </table>

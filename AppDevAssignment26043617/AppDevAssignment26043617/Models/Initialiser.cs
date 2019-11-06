@@ -26,9 +26,9 @@ namespace AppDevAssignment26043617.Models
                             StudentID = 6523,
                             Semester = 1,
                             Year = 2015,
-                            Assessment1Score = 56,
-                            Assessment2Score= 78,
-                            Exam = 54
+                            Assessment1Score = 11,
+                            Assessment2Score= 16,
+                            Exam = 32
 
                         },
                         new Results
@@ -36,9 +36,9 @@ namespace AppDevAssignment26043617.Models
                             StudentID = 6523,
                             Semester = 2,
                             Year = 2015,
-                            Assessment1Score = 75,
-                            Assessment2Score = 80,
-                            Exam = 85
+                            Assessment1Score = 15,
+                            Assessment2Score = 18,
+                            Exam = 55
                         }
                     }
                 },

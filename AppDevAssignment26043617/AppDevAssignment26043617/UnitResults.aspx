@@ -50,8 +50,10 @@
                         <td>
                             <%#:Item.Grade %>
                         </td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
+                        <td><asp:Image runat="server" Height="50px" Width="50px" Visible=<%# Item.FileId != null ? true : false %> ImageUrl=<%#:Item.FilePath %>/></td>
+                        <td>
+                            <asp:HyperLink Visible=<%# Item.Unit.FileId != null ? true : false %> href="<%#:Item.Unit.FilePath %>" runat="server"><%# Item.Unit.FileId != null ? Item.Unit.File.Name : "" %></asp:HyperLink>
+                        </td>
                     </tr>
                 </ItemTemplate>
                 <LayoutTemplate>
