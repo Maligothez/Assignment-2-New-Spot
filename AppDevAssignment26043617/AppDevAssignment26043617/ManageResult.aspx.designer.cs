@@ -11,7 +11,7 @@ namespace AppDevAssignment26043617
 {
 
 
-    public partial class ManageUnit
+    public partial class ManageResult
     {
 
         /// <summary>

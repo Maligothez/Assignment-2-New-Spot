@@ -16,17 +16,17 @@ namespace AppDevAssignment26043617
 
         }
 
-        public IQueryable<Results> GetResults([QueryString("id")] int? unitId)
+        public List<Results> GetResults([QueryString("id")] int? unitId)
         {
             var _db = new ApplicationDbContext();
 
             IQueryable<Results> query = _db.Results;
             if (unitId.HasValue && unitId > 0)
             {
-                query = query.Where(p => p.UnitId == unitId);
+                return query.Where(p => p.UnitId == unitId).ToList();
             }
 
-            return query;
+            return new List<Results>();
         }
     }
 }

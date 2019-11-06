@@ -1,5 +1,4 @@
-﻿<%@ Page Title="Results" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"
-    CodeBehind="ManageResults.aspx.cs" Inherits="AppDevAssignment26043617.ManageResults" %>
+﻿<%@ Page Language="C#" MasterPageFile="Site.Master" AutoEventWireup="true" CodeBehind="ViewStudentResults.aspx.cs" Inherits="AppDevAssignment26043617.ViewStudentResults" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <section>
@@ -8,7 +7,7 @@
                 <h2><%: Page.Title %></h2>
             </hgroup>
             
-            <asp:ListView ID="manageResultsView" runat="server"
+            <asp:ListView ID="viewStudentResultsView" runat="server"
                 DataKeyNames="ResultsID" GroupItemCount="4"
                 ItemType="AppDevAssignment26043617.Models.Results" SelectMethod="GetResults">
                 <EmptyDataTemplate>

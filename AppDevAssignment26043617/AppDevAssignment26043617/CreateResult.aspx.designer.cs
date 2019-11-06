@@ -11,17 +11,35 @@ namespace AppDevAssignment26043617
 {
 
 
-    public partial class ManageUnit
+    public partial class CreateResult
     {
 
         /// <summary>
-        /// unitCodeLabel control.
+        /// UnitCodeBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label unitCodeLabel;
+        protected global::System.Web.UI.WebControls.TextBox UnitCodeBox;
+
+        /// <summary>
+        /// UnitCodeValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator UnitCodeValidator;
+
+        /// <summary>
+        /// RegexValidatorUnitCode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegexValidatorUnitCode;
 
         /// <summary>
         /// UnitTitleBox control.
@@ -69,21 +87,12 @@ namespace AppDevAssignment26043617
         protected global::System.Web.UI.WebControls.Button btnSave;
 
         /// <summary>
-        /// btnDelete control.
+        /// cancelBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnDelete;
-
-        /// <summary>
-        /// btnCancel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCancel;
+        protected global::System.Web.UI.WebControls.Button cancelBtn;
     }
 }

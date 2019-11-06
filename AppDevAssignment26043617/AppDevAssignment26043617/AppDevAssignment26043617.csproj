@@ -227,6 +227,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="CreateResult.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -241,6 +242,7 @@
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Images\ecuicon.png" />
     <Content Include="CreateUnit.aspx" />
+    <Content Include="ManageResult.aspx" />
     <Content Include="ManageUnit.aspx" />
     <Content Include="UnitResults.aspx" />
     <Content Include="ManageResults.aspx" />
@@ -275,6 +277,7 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
     <Content Include="ViewReports.aspx" />
+    <Content Include="ViewStudentResults.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -397,6 +400,13 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="CreateResult.aspx.cs">
+      <DependentUpon>CreateResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateResult.aspx.designer.cs">
+      <DependentUpon>CreateResult.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -413,6 +423,13 @@
     </Compile>
     <Compile Include="CreateUnit.aspx.designer.cs">
       <DependentUpon>CreateUnit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageResult.aspx.cs">
+      <DependentUpon>ManageResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageResult.aspx.designer.cs">
+      <DependentUpon>ManageResult.aspx</DependentUpon>
     </Compile>
     <Compile Include="ManageUnit.aspx.cs">
       <DependentUpon>ManageUnit.aspx</DependentUpon>
@@ -470,6 +487,13 @@
     </Compile>
     <Compile Include="ViewReports.aspx.designer.cs">
       <DependentUpon>ViewReports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewStudentResults.aspx.cs">
+      <DependentUpon>ViewStudentResults.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewStudentResults.aspx.designer.cs">
+      <DependentUpon>ViewStudentResults.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
