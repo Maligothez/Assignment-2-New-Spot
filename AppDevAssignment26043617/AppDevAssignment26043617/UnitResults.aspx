@@ -27,7 +27,7 @@
                 <ItemTemplate>
                     <tr id="itemPlaceholderContainer" runat="server">
                         <td>
-                            <%#:Item.Units.UnitCode %>
+                            <%#:Item.Unit.UnitCode %>
                         </td>
                         <td>
                             <a href="ManageResults.aspx?ResultsID=<%#:Item.ResultsID %>"><%#:Item.ResultsID %></a>

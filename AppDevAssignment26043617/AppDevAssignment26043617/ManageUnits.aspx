@@ -37,7 +37,7 @@
                             <%#:Item.UnitCoordinator %>
                         </td>
                         <td>
-                            Unit Outline Download link
+                            <asp:HyperLink Visible=<%# Item.FileId != null ? true : false %> href="<%#:Item.FilePath %>" runat="server"><%# Item.FileId != null ? Item.File.Name : "" %></asp:HyperLink>
                         </td>
                     </tr>
                 </ItemTemplate>

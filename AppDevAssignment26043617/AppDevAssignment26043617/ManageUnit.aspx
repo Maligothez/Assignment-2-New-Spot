@@ -43,7 +43,8 @@
             <tr>
                 <td>Outline
                 </td>
-                <td>file upload control goes here
+                <td>
+                    <asp:FileUpload runat="server" ID="unitFileUpload"/>
                 </td>
             </tr>
         </table>

@@ -15,7 +15,7 @@ namespace AppDevAssignment26043617.Models
 
         public DbSet<Units> Units { get; set; }
         public DbSet<Results> Results { get; set; }
-
+        public DbSet<FileItem> Files { get; set; }
 
         public static ApplicationDbContext Create()
         {

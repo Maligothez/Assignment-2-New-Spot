@@ -30,10 +30,10 @@
                             <a href="ManageResult.aspx?ID=<%#:Item.ResultsID %>"><%#:Item.ResultsID %></a>
                         </td>
                         <td>
-                            <a href="ManageResult.aspx?ID=<%#:Item.ResultsID %>"><%#:Item.StudentID %></a>
+                            <a href="ManageResult.aspx?ID=<%#:Item.ResultsID %>"><%#:Item.StudentID.ToString("D8") %></a>
                         </td>
                         <td>
-                            <a href="ManageResult.aspx?ID=<%#:Item.ResultsID %>"><%#:Item.Units.UnitCode %></a>
+                            <a href="ManageResult.aspx?ID=<%#:Item.ResultsID %>"><%#:Item.Unit.UnitCode %></a>
                         </td>
                         <td>
                             <%#:Item.Semester %>
@@ -43,6 +43,9 @@
                         </td>
                         <td>
                             <%#:Item.Grade %>
+                        </td>
+                        <td>
+                            <asp:Image runat="server" Height="50px" Width="50px" Visible=<%# Item.FileId != null ? true : false %> ImageUrl=<%#:Item.FilePath %>/>
                         </td>
                     </tr>
                 </ItemTemplate>
@@ -56,6 +59,7 @@
                             <th>Semester</th>
                             <th>Year</th>
                             <th>Grade</th>
+                            <th>Photo</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -65,6 +69,9 @@
                     </table>
                 </LayoutTemplate>
             </asp:ListView>
+        </div>
+        <div>
+            <a href="CreateResult.aspx">Create Result</a>
         </div>
     </section>
 </asp:Content>

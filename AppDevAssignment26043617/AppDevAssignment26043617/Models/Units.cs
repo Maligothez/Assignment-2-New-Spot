@@ -21,9 +21,11 @@ namespace AppDevAssignment26043617.Models
         [Required, StringLength(50)]
         public string UnitCoordinator { get; set; }
 
-        public byte[] UnitOutline { get; set; }
+        public int? FileId { get; set; }
+        public virtual FileItem File { get; set; }
 
         public virtual ICollection<Results> Results { get; set; }
 
+        [NotMapped] public string FilePath => FileId != null ? $"/api/files/{FileId}" : "";
     }
 }

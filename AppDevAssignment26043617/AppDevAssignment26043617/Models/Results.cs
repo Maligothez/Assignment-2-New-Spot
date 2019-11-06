@@ -14,14 +14,14 @@ namespace AppDevAssignment26043617.Models
 
         [Required]
         public int UnitId { get; set; }
-        [Required]
-        public virtual Units Units { get; set; }
+        public virtual Units Unit { get; set; }
 
-        [Required ,Display(Name = "Student ID")]
+        [Required, Display(Name = "Student ID")]
         public int StudentID { get; set; }
 
         [Display(Name = "Student Photo")]
-        public byte[] StudentPhoto { get; set; }
+        public int? FileId { get; set; }
+        public virtual FileItem File { get; set; }
 
         [Required]
         public int Semester { get; set; }
@@ -38,7 +38,7 @@ namespace AppDevAssignment26043617.Models
         [Required, Display(Name = "Exam Score")]
         public int Exam { get; set; }
 
-        [NotMapped] public int UnitScore => Convert.ToInt32((Assessment1Score*0.2)  + (Assessment2Score * 0.2) + (Exam * 0.6) );
+        [NotMapped] public int UnitScore => Assessment1Score + Assessment2Score + Exam;
 
         [NotMapped]
         public string Grade
@@ -60,5 +60,6 @@ namespace AppDevAssignment26043617.Models
             }
         }
 
+        [NotMapped] public string FilePath => FileId != null ? $"/api/files/{FileId}" : "";
     }
 }

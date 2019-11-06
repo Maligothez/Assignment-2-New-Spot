@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.ModelBinding;
@@ -30,6 +31,17 @@ namespace AppDevAssignment26043617
                     UnitTitle = UnitTitleBox.Text?.Trim(),
                     UnitCoordinator = CoordinatorBox.Text?.Trim()
                 };
+
+                if (unitFileUpload.HasFile)
+                {
+                    unit.File = new FileItem
+                    {
+                        Name = unitFileUpload.FileName,
+                        Size = unitFileUpload.FileBytes.Length,
+                        Type = Path.GetExtension(unitFileUpload.FileName),
+                        Content = unitFileUpload.FileBytes
+                    };
+                }
 
                 _db.Units.Add(unit);
 

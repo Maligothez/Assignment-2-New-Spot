@@ -32,7 +32,7 @@
                             <a href="ManageResult.aspx?ID=<%#:Item.ResultsID %>"><%#:Item.StudentID %></a>
                         </td>
                         <td>
-                            <a href="ManageResult.aspx?ID=<%#:Item.ResultsID %>"><%#:Item.Units.UnitCode %></a>
+                            <a href="ManageResult.aspx?ID=<%#:Item.ResultsID %>"><%#:Item.Unit.UnitCode %></a>
                         </td>
                         <td>
                             <%#:Item.Semester %>
