@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using AppDevAssignment26043617.Models;
+using Serilog;
 
 namespace AppDevAssignment26043617
 {
@@ -12,15 +13,6 @@ namespace AppDevAssignment26043617
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            using (var db = new ApplicationDbContext())
-            {
-                var items = db.Results.ToList();
-
-                foreach (var item in items)
-                {
-                    Console.WriteLine(item);
-                }
-            }
         }
     }
 }

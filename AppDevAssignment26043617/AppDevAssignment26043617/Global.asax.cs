@@ -8,6 +8,8 @@ using System.Web.Security;
 using System.Web.SessionState;
 using System.Data.Entity;
 using AppDevAssignment26043617.Models;
+using Serilog;
+using Serilog.Events;
 
 namespace AppDevAssignment26043617
 {
@@ -21,6 +23,14 @@ namespace AppDevAssignment26043617
 
             // Initialize the product database.
             //Database.SetInitializer(new Initialiser());
+
+            Log.Logger = new LoggerConfiguration()
+                .MinimumLevel.Debug()
+                .WriteTo.Console()
+                .WriteTo.MSSqlServer(
+                    System.Configuration.ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString,
+                    "Log", autoCreateSqlTable: true)
+                .CreateLogger();
         }
     }
 }
