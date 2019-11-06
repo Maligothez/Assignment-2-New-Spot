@@ -38,16 +38,21 @@ namespace AppDevAssignment26043617.Models
         [Required, Display(Name = "Exam Score")]
         public int Exam { get; set; }
 
-        [NotMapped] public int UnitScore => Convert.ToInt32((Assessment1Score + Assessment2Score + Exam) / 3);
+        [NotMapped] public int UnitScore => Convert.ToInt32((Assessment1Score*0.2)  + (Assessment2Score * 0.2) + (Exam * 0.6) );
 
+        
+
+        [NotMapped]
         public string Grade
         {
             get
             {
-                if (UnitScore < 60)
+                if (UnitScore < 50)
                     return "N";
-                else if (UnitScore < 80)
+                else if (UnitScore < 60)
                     return "Cr";
+                else if (UnitScore < 70 && UnitScore > 80)
+                    return "D";
                 else
                 {
                     return "HD";
