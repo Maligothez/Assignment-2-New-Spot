@@ -185,6 +185,8 @@
     <Content Include="Account\Web.config" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Images\ecuicon.png" />
+    <Content Include="CreateUnit.aspx" />
+    <Content Include="ManageUnit.aspx" />
     <Content Include="UnitResults.aspx" />
     <Content Include="ManageResults.aspx" />
     <Content Include="ManageUnits.aspx" />
@@ -349,6 +351,20 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="CreateUnit.aspx.cs">
+      <DependentUpon>CreateUnit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateUnit.aspx.designer.cs">
+      <DependentUpon>CreateUnit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageUnit.aspx.cs">
+      <DependentUpon>ManageUnit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageUnit.aspx.designer.cs">
+      <DependentUpon>ManageUnit.aspx</DependentUpon>
     </Compile>
     <Compile Include="UnitResults.aspx.cs">
       <DependentUpon>UnitResults.aspx</DependentUpon>

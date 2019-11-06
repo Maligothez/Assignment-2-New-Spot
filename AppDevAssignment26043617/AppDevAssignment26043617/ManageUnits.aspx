@@ -28,7 +28,16 @@
                 <ItemTemplate>
                     <tr id="itemPlaceholderContainer" runat="server">
                         <td>
-                            <a href="ManageUnits.aspx?ID=<%#:Item.UnitId %>"><%#:Item.UnitCode %></a>
+                            <a href="ManageUnit.aspx?ID=<%#:Item.UnitId %>"><%#:Item.UnitCode %></a>
+                        </td>
+                        <td>
+                            <%#:Item.UnitTitle %>
+                        </td>
+                        <td>
+                            <%#:Item.UnitCoordinator %>
+                        </td>
+                        <td>
+                            Unit Outline Download link
                         </td>
                     </tr>
                 </ItemTemplate>
@@ -41,6 +50,10 @@
                     </table>
                 </LayoutTemplate>
             </asp:ListView>
+            
+            <div>
+                <a href="CreateUnit.aspx">Create Unit</a>
+            </div>
         </div>
     </section>
 </asp:Content>

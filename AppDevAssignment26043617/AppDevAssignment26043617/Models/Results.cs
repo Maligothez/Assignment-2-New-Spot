@@ -21,7 +21,7 @@ namespace AppDevAssignment26043617.Models
         public int StudentID { get; set; }
 
         [Display(Name = "Student Photo")]
-        public byte StudentPhoto { get; set; }
+        public byte[] StudentPhoto { get; set; }
 
         [Required]
         public int Semester { get; set; }
@@ -40,8 +40,6 @@ namespace AppDevAssignment26043617.Models
 
         [NotMapped] public int UnitScore => Convert.ToInt32((Assessment1Score*0.2)  + (Assessment2Score * 0.2) + (Exam * 0.6) );
 
-        
-
         [NotMapped]
         public string Grade
         {
@@ -50,8 +48,10 @@ namespace AppDevAssignment26043617.Models
                 if (UnitScore < 50)
                     return "N";
                 else if (UnitScore < 60)
+                    return "P";
+                else if (UnitScore < 70)
                     return "Cr";
-                else if (UnitScore < 70 && UnitScore > 80)
+                else if (UnitScore < 80)
                     return "D";
                 else
                 {
