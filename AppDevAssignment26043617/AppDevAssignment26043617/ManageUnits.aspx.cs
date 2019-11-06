@@ -17,5 +17,14 @@ namespace AppDevAssignment26043617
 
         }
 
+        public IQueryable<Units> GetUnits()
+        {
+            var _db = new ApplicationDbContext();
+
+            IQueryable<Units> query = _db.Units;
+
+            return query;
+        }
+
     }
 }

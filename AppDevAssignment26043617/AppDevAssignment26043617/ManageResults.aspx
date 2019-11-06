@@ -9,8 +9,8 @@
             </hgroup>
 
             <asp:ListView ID="manageResultsView" runat="server"
-                DataKeyNames="UnitId" GroupItemCount="4"
-                ItemType="AppDevAssignment26043617.Models.Units" SelectMethod="GetResults">
+                DataKeyNames="ResultsID" GroupItemCount="4"
+                ItemType="AppDevAssignment26043617.Models.Results" SelectMethod="GetResults">
                 <EmptyDataTemplate>
                     <table>
                         <tr>
@@ -27,7 +27,7 @@
                 <ItemTemplate>
                     <tr id="itemPlaceholderContainer" runat="server">
                         <td>
-                            <a href="UnitResults.aspx?ID=<%#:Item.UnitId %>"><%#:Item.UnitCode %></a>
+                            <a href="UnitResults.aspx?ID=<%#:Item.ResultsID %>"><%#:Item.UnitId %><%#:Item.StudentID %></a>
                         </td>
                     </tr>
                 </ItemTemplate>
