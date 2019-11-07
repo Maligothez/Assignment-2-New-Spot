@@ -6,6 +6,10 @@
                 <h2><%: Page.Title %></h2>
             </hgroup>
             
+            <hgroup><h3>
+                <a href="ViewResults.aspx">Filter All Results</a>
+            </h3></hgroup>
+            
             <hgroup><h3>Results by Unit</h3></hgroup>
             <asp:ListView ID="viewReportsView" runat="server"
                           DataKeyNames="UnitId" GroupItemCount="4"

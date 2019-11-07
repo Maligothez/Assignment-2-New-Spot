@@ -15,7 +15,7 @@ namespace AppDevAssignment26043617.Models
                 new Units
                 {
                     UnitId = 1,
-                    UnitCode = "10654",
+                    UnitCode = "CSR1654",
                     UnitTitle = "Advanced Bread and Buttery",
                     UnitCoordinator = "Fred Bread",
                     Results = new List<Results>
@@ -23,7 +23,7 @@ namespace AppDevAssignment26043617.Models
                         new Results
                         {
                             UnitId = 1,
-                            StudentID = 6523,
+                            StudentID = 65231234,
                             Semester = 1,
                             Year = 2015,
                             Assessment1Score = 11,
@@ -33,7 +33,7 @@ namespace AppDevAssignment26043617.Models
                         },
                         new Results
                         {
-                            StudentID = 6523,
+                            StudentID = 65231234,
                             Semester = 2,
                             Year = 2015,
                             Assessment1Score = 15,
@@ -45,7 +45,7 @@ namespace AppDevAssignment26043617.Models
                 new Units
                 {
                     UnitId = 2,
-                    UnitCode = "CSI655",
+                    UnitCode = "CSI6540",
                     UnitTitle = "Dog Hidery",
                     UnitCoordinator = "Spot",
                     Results = new List<Results>
@@ -53,12 +53,12 @@ namespace AppDevAssignment26043617.Models
                         new Results
                         {
                             UnitId = 2,
-                            StudentID = 10458,
+                            StudentID = 10458123,
                             Semester = 2,
                             Year = 2016,
-                            Assessment1Score = 80,
-                            Assessment2Score= 78,
-                            Exam = 99
+                            Assessment1Score = 12,
+                            Assessment2Score= 18,
+                            Exam = 45
                         }
                     }
                 },

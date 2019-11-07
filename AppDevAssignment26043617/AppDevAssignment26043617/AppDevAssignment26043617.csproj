@@ -249,6 +249,7 @@
     <Content Include="Content\bootstrap.min.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Account\Web.config" />
+    <Content Include="Manager\ViewResults.aspx" />
     <Content Include="Manager\Web.config" />
     <Content Include="Admin\Web.config" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
@@ -449,6 +450,13 @@
     </Compile>
     <Compile Include="Admin\EditUnit.aspx.designer.cs">
       <DependentUpon>EditUnit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\ViewResults.aspx.cs">
+      <DependentUpon>ViewResults.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\ViewResults.aspx.designer.cs">
+      <DependentUpon>ViewResults.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\FileItem.cs" />
     <Compile Include="Manager\UnitResults.aspx.cs">
