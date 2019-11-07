@@ -11,7 +11,7 @@ namespace AppDevAssignment26043617
 {
 
 
-    public partial class ManageUnit
+    public partial class EditUnit
     {
 
         /// <summary>
@@ -58,6 +58,15 @@ namespace AppDevAssignment26043617
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator CoordinatorValidate;
+
+        /// <summary>
+        /// existingFileLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink existingFileLink;
 
         /// <summary>
         /// unitFileUpload control.

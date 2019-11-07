@@ -26,13 +26,13 @@
                 <ItemTemplate>
                     <tr id="itemPlaceholderContainer" runat="server">
                         <td>
-                            <a href="ManageResult.aspx?ID=<%#:Item.ResultsID %>"><%#:Item.ResultsID %></a>
+                            <a href="EditResult.aspx?ID=<%#:Item.ResultsID %>"><%#:Item.ResultsID %></a>
                         </td>
                         <td>
-                            <a href="ManageResult.aspx?ID=<%#:Item.ResultsID %>"><%#:Item.StudentID %></a>
+                            <a href="EditResult.aspx?ID=<%#:Item.ResultsID %>"><%#:Item.StudentID %></a>
                         </td>
                         <td>
-                            <a href="ManageResult.aspx?ID=<%#:Item.ResultsID %>"><%#:Item.Unit.UnitCode %></a>
+                            <a href="EditResult.aspx?ID=<%#:Item.ResultsID %>"><%#:Item.Unit.UnitCode %></a>
                         </td>
                         <td>
                             <%#:Item.Semester %>

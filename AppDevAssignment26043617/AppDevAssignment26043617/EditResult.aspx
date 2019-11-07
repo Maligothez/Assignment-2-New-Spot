@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="Site.Master" AutoEventWireup="true" CodeBehind="ManageResult.aspx.cs" Inherits="AppDevAssignment26043617.ManageResult" %>
+﻿<%@ Page Language="C#" MasterPageFile="Site.Master" AutoEventWireup="true" CodeBehind="EditResult.aspx.cs" Inherits="AppDevAssignment26043617.EditResult" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <section>
@@ -145,6 +145,8 @@
                 <td>Student Photo
                 </td>
                 <td>
+                    <asp:Image runat="server" Height="50px" Width="50px" ID="existingImageBox" Visible="False" />
+
                     <asp:FileUpload runat="server" ID="StudentPhoto" accept=".png,.jpg,.jpeg,.gif" />
                 </td>
             </tr>

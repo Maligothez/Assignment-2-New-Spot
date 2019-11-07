@@ -10,7 +10,7 @@ using AppDevAssignment26043617.Models;
 
 namespace AppDevAssignment26043617
 {
-    public partial class ManageUnit : System.Web.UI.Page
+    public partial class EditUnit : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -46,6 +46,13 @@ namespace AppDevAssignment26043617
                     unitCodeLabel.Text = unitRequest.UnitCode;
                     UnitTitleBox.Text = unitRequest.UnitTitle;
                     CoordinatorBox.Text = unitRequest.UnitCoordinator;
+
+                    if (unitRequest.FileId != null)
+                    {
+                        existingFileLink.NavigateUrl = unitRequest.FilePath;
+                        existingFileLink.Text = unitRequest.File.Name;
+                        existingFileLink.Visible = true;
+                    }
                 }
                 catch
                 {

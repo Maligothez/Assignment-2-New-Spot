@@ -11,7 +11,7 @@ namespace AppDevAssignment26043617
 {
 
 
-    public partial class ManageResult
+    public partial class EditResult
     {
 
         /// <summary>
@@ -193,6 +193,15 @@ namespace AppDevAssignment26043617
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RangeValidator ExamRange;
+
+        /// <summary>
+        /// existingImageBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image existingImageBox;
 
         /// <summary>
         /// StudentPhoto control.

@@ -252,8 +252,8 @@
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Images\ecuicon.png" />
     <Content Include="CreateUnit.aspx" />
-    <Content Include="ManageResult.aspx" />
-    <Content Include="ManageUnit.aspx" />
+    <Content Include="EditResult.aspx" />
+    <Content Include="EditUnit.aspx" />
     <Content Include="UnitResults.aspx" />
     <Content Include="ManageResults.aspx" />
     <Content Include="ManageUnits.aspx" />
@@ -412,7 +412,6 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="CreateResult.aspx.cs">
       <DependentUpon>CreateResult.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CreateResult.aspx.designer.cs">
       <DependentUpon>CreateResult.aspx</DependentUpon>
@@ -435,19 +434,19 @@
     <Compile Include="CreateUnit.aspx.designer.cs">
       <DependentUpon>CreateUnit.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ManageResult.aspx.cs">
-      <DependentUpon>ManageResult.aspx</DependentUpon>
+    <Compile Include="EditResult.aspx.cs">
+      <DependentUpon>EditResult.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ManageResult.aspx.designer.cs">
-      <DependentUpon>ManageResult.aspx</DependentUpon>
+    <Compile Include="EditResult.aspx.designer.cs">
+      <DependentUpon>EditResult.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ManageUnit.aspx.cs">
-      <DependentUpon>ManageUnit.aspx</DependentUpon>
+    <Compile Include="EditUnit.aspx.cs">
+      <DependentUpon>EditUnit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ManageUnit.aspx.designer.cs">
-      <DependentUpon>ManageUnit.aspx</DependentUpon>
+    <Compile Include="EditUnit.aspx.designer.cs">
+      <DependentUpon>EditUnit.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\FileItem.cs" />
     <Compile Include="UnitResults.aspx.cs">

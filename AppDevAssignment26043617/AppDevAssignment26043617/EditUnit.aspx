@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="Site.Master" CodeBehind="ManageUnit.aspx.cs" Inherits="AppDevAssignment26043617.ManageUnit" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="Site.Master" CodeBehind="EditUnit.aspx.cs" Inherits="AppDevAssignment26043617.EditUnit" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <section>
@@ -44,6 +44,8 @@
                 <td>Outline
                 </td>
                 <td>
+                    <asp:HyperLink Visible="False" ID="existingFileLink" runat="server"></asp:HyperLink>
+
                     <asp:FileUpload runat="server" ID="unitFileUpload"/>
                 </td>
             </tr>
