@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" MasterPageFile="Site.Master" AutoEventWireup="true" CodeBehind="EditResult.aspx.cs" Inherits="AppDevAssignment26043617.EditResult" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<asp:Content ID="EditResultContent" ContentPlaceHolderID="MainContent" runat="server">
     <section>
         <div>
             <hgroup>
@@ -35,7 +35,7 @@
                 <td>
                     <asp:TextBox runat="server" ID="StudentIdBox" Width="100%" TextMode="Number"></asp:TextBox>
 
-                    <asp:RequiredFieldValidator ID="studentValidator" runat="server" TextMode="Number"
+                    <asp:RequiredFieldValidator ID="studentValidator" runat="server"
                         ControlToValidate="StudentIdBox" ForeColor="Red"
                         ValidationGroup="FormValidate"
                         ToolTip="Please enter a Student ID" Display="Dynamic">

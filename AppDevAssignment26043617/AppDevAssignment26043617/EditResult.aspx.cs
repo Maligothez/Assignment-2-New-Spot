@@ -14,49 +14,51 @@ namespace AppDevAssignment26043617
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            var queryString = Request.QueryString["id"];
-
-            if (string.IsNullOrWhiteSpace(queryString))
+            if (!IsPostBack)
             {
-                Response.Redirect("ManageResults.aspx");
-                return;
-            }
-            try
-            {
+                var queryString = Request.QueryString["id"];
 
-
-                var queryId = Convert.ToInt32(queryString?.Trim());
-                var db = new ApplicationDbContext();
-                var resultItem = db.Results.FirstOrDefault(x => x.ResultsID == queryId);
-
-                if (resultItem == null)
+                if (string.IsNullOrWhiteSpace(queryString))
                 {
                     Response.Redirect("ManageResults.aspx");
                     return;
                 }
 
-                UnitCodeSelect.Text = resultItem.Unit.UnitId.ToString();
-                StudentIdBox.Text = resultItem.StudentID.ToString();
-                SemesterBox.Text = resultItem.Semester.ToString();
-                YearBox.Text = resultItem.Year.ToString();
-                Assessment1Box.Text = resultItem.Assessment1Score.ToString();
-                Assessment2Box.Text = resultItem.Assessment2Score.ToString();
-                ExamBox.Text = resultItem.Exam.ToString();
-
-                if (resultItem.FileId != null)
+                try
                 {
-                    existingImageBox.ImageUrl = resultItem.FilePath;
-                    existingImageBox.Visible = true;
+                    var queryId = Convert.ToInt32(queryString?.Trim());
+                    var db = new ApplicationDbContext();
+                    var resultItem = db.Results.FirstOrDefault(x => x.ResultsID == queryId);
+
+                    if (resultItem == null)
+                    {
+                        Response.Redirect("ManageResults.aspx");
+                        return;
+                    }
+
+                    UnitCodeSelect.Text = resultItem.Unit.UnitId.ToString();
+                    StudentIdBox.Text = resultItem.StudentID.ToString();
+                    SemesterBox.Text = resultItem.Semester.ToString();
+                    YearBox.Text = resultItem.Year.ToString();
+                    Assessment1Box.Text = resultItem.Assessment1Score.ToString();
+                    Assessment2Box.Text = resultItem.Assessment2Score.ToString();
+                    ExamBox.Text = resultItem.Exam.ToString();
+
+                    if (resultItem.FileId != null)
+                    {
+                        existingImageBox.ImageUrl = resultItem.FilePath;
+                        existingImageBox.Visible = true;
+                    }
                 }
-            }
-            catch
-            {
-                Response.Redirect("ManageResults.aspx");
-                return;
+                catch
+                {
+                    Response.Redirect("ManageResults.aspx");
+                    return;
+                }
             }
         }
 
-            protected void btnSave_Click(object sender, EventArgs e)
+        protected void btnSave_Click(object sender, EventArgs e)
         {
             if (IsPostBack)
             {
