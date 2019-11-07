@@ -98,7 +98,7 @@
                         ControlToValidate="Assessment1Box" ForeColor="Red"
                         ValidationGroup="FormValidate"
                         ToolTip="Please enter the first Assessment score." Display="Dynamic">
-                        You must enter a semester.
+                        You must enter an Assesment 1 Score.
                     </asp:RequiredFieldValidator>
                     <asp:RangeValidator ID="Assess1Range" runat="server" ValidationGroup="FormValidate" ControlToValidate="Assessment1Box"
                         Type="Integer" ErrorMessage="Enter an integer, 0 to 20" MaximumValue="20"
@@ -115,7 +115,7 @@
                         ControlToValidate="Assessment2Box" ForeColor="Red"
                         ValidationGroup="FormValidate"
                         ToolTip="Please enter the second Assessment score." Display="Dynamic">
-                        You must enter a semester.
+                        You must enter an Assesment 2 Score.
                     </asp:RequiredFieldValidator>
                     <asp:RangeValidator ID="Assess2Range" runat="server" ValidationGroup="FormValidate" ControlToValidate="Assessment2Box"
                         Type="Integer" ErrorMessage="Enter an integer, 0 to 20" MaximumValue="20"
@@ -133,7 +133,7 @@
                         ControlToValidate="ExamBox" ForeColor="Red"
                         ValidationGroup="FormValidate"
                         ToolTip="Please enter the Exam Score." Display="Dynamic">
-                        You must enter a semester.
+                        You must enter an Exam Score.
                     </asp:RequiredFieldValidator>
                     <asp:RangeValidator ID="ExamRange" runat="server" ValidationGroup="FormValidate" ControlToValidate="ExamBox"
                         Type="Integer" ErrorMessage="Enter an integer, 0 to 60" MaximumValue="60"
