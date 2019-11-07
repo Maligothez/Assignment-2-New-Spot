@@ -69,7 +69,13 @@ namespace AppDevAssignment26043617
                 if (result == null)
                     return;
 
-                
+                result.StudentID = StudentIdBox.Text.ToInteger();
+                result.Semester = SemesterBox.Text.ToInteger();
+                result.Year = YearBox.Text.ToInteger();
+                result.Assessment1Score = Assessment1Box.Text.ToInteger();
+                result.Assessment2Score = Assessment2Box.Text.ToInteger();
+                result.Exam = ExamBox.Text.ToInteger();
+                result.UnitId = UnitCodeSelect.SelectedItem.Value.ToInteger();
 
                 if (StudentPhoto.HasFile)
                 {
