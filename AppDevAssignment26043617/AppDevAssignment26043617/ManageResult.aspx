@@ -7,12 +7,9 @@
                 <h2><%: Page.Title %></h2>
             </hgroup>
         </div>
-        <div>
-            <h3><asp:Label runat="server" ID="unitCodeLabel"></asp:Label></h3>
-        </div>
         <br />
         <table width="100%">
-             <tr>
+            <tr>
                 <td>Unit Code
                 </td>
                 <td>
@@ -52,7 +49,7 @@
                     </asp:RegularExpressionValidator>
                 </td>
             </tr>
-             <tr>
+            <tr>
                 <td>Semester
                 </td>
                 <td>
@@ -145,9 +142,10 @@
                 </td>
             </tr>
             <tr>
-                <td>Outline
+                <td>Student Photo
                 </td>
-                <td>file upload control goes here
+                <td>
+                    <asp:FileUpload runat="server" ID="StudentPhoto" accept=".png,.jpg,.jpeg,.gif" />
                 </td>
             </tr>
         </table>

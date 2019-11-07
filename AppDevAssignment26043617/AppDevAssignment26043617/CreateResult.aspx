@@ -141,7 +141,7 @@
                 </td>
             </tr>
             <tr>
-                <td>Outline
+                <td>Student Photo
                 </td>
                 <td>
                     <asp:FileUpload runat="server" ID="StudentPhoto" accept=".png,.jpg,.jpeg,.gif" />

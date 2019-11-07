@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using AppDevAssignment26043617.Models;
 
 namespace AppDevAssignment26043617
 {
@@ -27,6 +28,13 @@ namespace AppDevAssignment26043617
         protected void btnCancel_Click(object sender, EventArgs e)
         {
             throw new NotImplementedException();
+        }
+
+        public IEnumerable<Units> GetUnits()
+        {
+            var db = new ApplicationDbContext();
+
+            return db.Units.ToList();
         }
     }
 }
