@@ -34,11 +34,13 @@ namespace AppDevAssignment26043617.Migrations
             if (roles.All(x => x.Name != "Admin"))
             {
                 roleManager.Create(AdminRole);
+                context.SaveChanges();
             }
 
             if (roles.All(x => x.Name != "Event Manager"))
             {
                 roleManager.Create(EventManager);
+                context.SaveChanges();
             }
 
             var userStore = new UserStore<ApplicationUser>(context);
@@ -49,11 +51,13 @@ namespace AppDevAssignment26043617.Migrations
                 var user = new ApplicationUser()
                 {
                     Email = "admin@ecu.com",
-                    UserName = "Administrator"
+                    UserName = "admin@ecu.com",
+                    EmailConfirmed = true
                 };
 
                 userManager.Create(user, "Admin#1");
                 context.Users.AddOrUpdate(user);
+                context.SaveChanges();
                 userManager.AddToRole(user.Id, "Admin");
             }
 
@@ -64,11 +68,13 @@ namespace AppDevAssignment26043617.Migrations
                 var user = new ApplicationUser()
                 {
                     Email = "manager@ecu.com",
-                    UserName = "Event Manager"
+                    UserName = "manager@ecu.com",
+                    EmailConfirmed = true
                 };
 
                 userManager.Create(user, "Manager#1");
                 context.Users.AddOrUpdate(user);
+                context.SaveChanges();
                 userManager.AddToRole(user.Id, "Event Manager");
             }
         }

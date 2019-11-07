@@ -11,7 +11,7 @@
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
-    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
 </head>
@@ -50,12 +50,12 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/ManageUnits">Manage Units</a></li>
-                        <li><a runat="server" href="~/ManageResults">Manage Results</a></li>
-                        <li><a runat="server" href="~/ViewReports">View Reports</a></li>
-</ul>
+                        <li><a runat="server" id="adminLink" href="~/Admin/ManageUnits">Manage Units</a></li>
+                        <li><a runat="server" id="manageResultLink" href="~/Manager/ManageResults">Manage Results</a></li>
+                        <li><a runat="server" id="viewReportLink" href="~/Manager/ViewReports">View Reports</a></li>
+                    </ul>
 
-                    
+
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
                             <ul class="nav navbar-nav navbar-right">
@@ -77,9 +77,9 @@
         </div>
         <div id="TitleContent" style="text-align: center">
             <a runat="server" href="~/">
-                <asp:Image  ID="Image1" runat="server" ImageUrl="~/Images/ecuicon.png" BorderStyle="None" />
-            </a>  
-            <br />  
+                <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/ecuicon.png" BorderStyle="None" />
+            </a>
+            <br />
         </div>
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">

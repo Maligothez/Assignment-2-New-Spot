@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="Site.Master" AutoEventWireup="true" CodeBehind="CreateResult.aspx.cs" Inherits="AppDevAssignment26043617.CreateResult" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CreateResult.aspx.cs" Inherits="AppDevAssignment26043617.CreateResult" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <section>

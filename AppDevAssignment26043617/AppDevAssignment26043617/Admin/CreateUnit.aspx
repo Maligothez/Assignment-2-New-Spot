@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="Site.Master" CodeBehind="EditUnit.aspx.cs" Inherits="AppDevAssignment26043617.EditUnit" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Site.Master" CodeBehind="CreateUnit.aspx.cs" Inherits="AppDevAssignment26043617.CreateUnit" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <section>
@@ -7,13 +7,31 @@
                 <h2><%: Page.Title %></h2>
             </hgroup>
         </div>
-        <div>
-            <h3><asp:Label runat="server" ID="unitCodeLabel"></asp:Label></h3>
-        </div>
-        <br />
         <table width="100%">
             <tr>
-                <td>Title
+                <td>
+                    Unit Code
+                </td>
+                <td>
+                    <asp:TextBox runat="server" ID="UnitCodeBox" Width="100%"></asp:TextBox>
+
+                    <asp:RequiredFieldValidator ID="UnitCodeValidator" runat="server"
+                                                ControlToValidate="UnitCodeBox" ForeColor="Red"
+                                                ValidationGroup="FormValidate"
+                                                ToolTip="Please enter the Unit Code" Display="Dynamic">
+                        You must enter a unit code.
+                    </asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator
+                        ID="RegexValidatorUnitCode" runat="server" ControlToValidate="UnitCodeBox"
+                        ValidationGroup="FormValidate"
+                        ForeColor="Red" Display="Dynamic" ErrorMessage="Please enter a valid  3 letter, 4 number unit code. Eg: CS12016"
+                        ValidationExpression="[A-Za-z]{3}[0-9]{4}">
+                    </asp:RegularExpressionValidator>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Title
                 </td>
                 <td>
                     <asp:TextBox runat="server" ID="UnitTitleBox" Width="100%"></asp:TextBox>
@@ -27,7 +45,8 @@
                 </td>
             </tr>
             <tr>
-                <td>Coordinator
+                <td>
+                    Coordinator
                 </td>
                 <td>
                     <asp:TextBox runat="server" ID="CoordinatorBox" Width="100%"></asp:TextBox>
@@ -41,20 +60,17 @@
                 </td>
             </tr>
             <tr>
-                <td>Outline
+                <td>
+                    Outline
                 </td>
                 <td>
-                    <asp:HyperLink Visible="False" ID="existingFileLink" runat="server"></asp:HyperLink>
-
                     <asp:FileUpload runat="server" ID="unitFileUpload"/>
                 </td>
             </tr>
         </table>
-
         <div>
-            <asp:Button runat="server" ID="btnSave" ValidationGroup="FormValidate" Text="Save" OnClick="btnSave_Click" />
-            <asp:Button runat="server" ID="btnDelete" Text="Delete" OnClick="btnDelete_Click" OnClientClick="return confirm('Are you sure you want to delete this?')" />
-            <asp:Button runat="server" ID="btnCancel" Text="Cancel" OnClick="btnCancel_Click" />
+            <asp:Button runat="server" ID="btnSave" Text="Save" ValidationGroup="FormValidate" OnClick="btnSave_Click"/>
+            <asp:Button runat="server" ID="cancelBtn" Text="Cancel" OnClick="btnCancel_Click"/>
         </div>
     </section>
 </asp:Content>

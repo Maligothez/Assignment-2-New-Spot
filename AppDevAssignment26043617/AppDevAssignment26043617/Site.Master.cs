@@ -71,6 +71,25 @@ namespace AppDevAssignment26043617
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (HttpContext.Current.User.IsInRole("Admin"))
+            {
+                adminLink.Visible = true;
+            }
+            else
+            {
+                adminLink.Visible = false;
+            }
+
+            if (HttpContext.Current.User.IsInRole("Event Manager"))
+            {
+                manageResultLink.Visible = true;
+                viewReportLink.Visible = true;
+            }
+            else
+            {
+                manageResultLink.Visible = false;
+                viewReportLink.Visible = false;
+            }
 
         }
 

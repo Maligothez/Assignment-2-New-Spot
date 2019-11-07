@@ -237,7 +237,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="CreateResult.aspx" />
+    <Content Include="Manager\CreateResult.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -249,14 +249,16 @@
     <Content Include="Content\bootstrap.min.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Account\Web.config" />
+    <Content Include="Manager\Web.config" />
+    <Content Include="Admin\Web.config" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Images\ecuicon.png" />
-    <Content Include="CreateUnit.aspx" />
-    <Content Include="EditResult.aspx" />
-    <Content Include="EditUnit.aspx" />
-    <Content Include="UnitResults.aspx" />
-    <Content Include="ManageResults.aspx" />
-    <Content Include="ManageUnits.aspx" />
+    <Content Include="Admin\CreateUnit.aspx" />
+    <Content Include="Manager\EditResult.aspx" />
+    <Content Include="Admin\EditUnit.aspx" />
+    <Content Include="Manager\UnitResults.aspx" />
+    <Content Include="Manager\ManageResults.aspx" />
+    <Content Include="Admin\ManageUnits.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -286,8 +288,8 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
-    <Content Include="ViewReports.aspx" />
-    <Content Include="ViewStudentResults.aspx" />
+    <Content Include="Manager\ViewReports.aspx" />
+    <Content Include="Manager\ViewStudentResults.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -410,10 +412,10 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="CreateResult.aspx.cs">
+    <Compile Include="Manager\CreateResult.aspx.cs">
       <DependentUpon>CreateResult.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CreateResult.aspx.designer.cs">
+    <Compile Include="Manager\CreateResult.aspx.designer.cs">
       <DependentUpon>CreateResult.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
@@ -427,47 +429,47 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="CreateUnit.aspx.cs">
+    <Compile Include="Admin\CreateUnit.aspx.cs">
       <DependentUpon>CreateUnit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CreateUnit.aspx.designer.cs">
+    <Compile Include="Admin\CreateUnit.aspx.designer.cs">
       <DependentUpon>CreateUnit.aspx</DependentUpon>
     </Compile>
-    <Compile Include="EditResult.aspx.cs">
+    <Compile Include="Manager\EditResult.aspx.cs">
       <DependentUpon>EditResult.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="EditResult.aspx.designer.cs">
+    <Compile Include="Manager\EditResult.aspx.designer.cs">
       <DependentUpon>EditResult.aspx</DependentUpon>
     </Compile>
-    <Compile Include="EditUnit.aspx.cs">
+    <Compile Include="Admin\EditUnit.aspx.cs">
       <DependentUpon>EditUnit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="EditUnit.aspx.designer.cs">
+    <Compile Include="Admin\EditUnit.aspx.designer.cs">
       <DependentUpon>EditUnit.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\FileItem.cs" />
-    <Compile Include="UnitResults.aspx.cs">
+    <Compile Include="Manager\UnitResults.aspx.cs">
       <DependentUpon>UnitResults.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UnitResults.aspx.designer.cs">
+    <Compile Include="Manager\UnitResults.aspx.designer.cs">
       <DependentUpon>UnitResults.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ManageResults.aspx.cs">
+    <Compile Include="Manager\ManageResults.aspx.cs">
       <DependentUpon>ManageResults.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ManageResults.aspx.designer.cs">
+    <Compile Include="Manager\ManageResults.aspx.designer.cs">
       <DependentUpon>ManageResults.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ManageUnits.aspx.cs">
+    <Compile Include="Admin\ManageUnits.aspx.cs">
       <DependentUpon>ManageUnits.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ManageUnits.aspx.designer.cs">
+    <Compile Include="Admin\ManageUnits.aspx.designer.cs">
       <DependentUpon>ManageUnits.aspx</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
@@ -492,18 +494,18 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
-    <Compile Include="ViewReports.aspx.cs">
+    <Compile Include="Manager\ViewReports.aspx.cs">
       <DependentUpon>ViewReports.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ViewReports.aspx.designer.cs">
+    <Compile Include="Manager\ViewReports.aspx.designer.cs">
       <DependentUpon>ViewReports.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ViewStudentResults.aspx.cs">
+    <Compile Include="Manager\ViewStudentResults.aspx.cs">
       <DependentUpon>ViewStudentResults.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ViewStudentResults.aspx.designer.cs">
+    <Compile Include="Manager\ViewStudentResults.aspx.designer.cs">
       <DependentUpon>ViewStudentResults.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">

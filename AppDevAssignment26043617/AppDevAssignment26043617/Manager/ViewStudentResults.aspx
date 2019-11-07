@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="Site.Master" AutoEventWireup="true" CodeBehind="ViewStudentResults.aspx.cs" Inherits="AppDevAssignment26043617.ViewStudentResults" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ViewStudentResults.aspx.cs" Inherits="AppDevAssignment26043617.ViewStudentResults" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <section>
