@@ -7,6 +7,9 @@
                 <h2><%: Page.Title %></h2>
             </hgroup>
             
+            <div>
+                <h3><asp:Label runat="server" ID="studentLabel"></asp:Label></h3>
+            </div>
             <asp:ListView ID="viewStudentResultsView" runat="server"
                 DataKeyNames="ResultsID" GroupItemCount="4"
                 ItemType="AppDevAssignment26043617.Models.Results" SelectMethod="GetResults">
@@ -29,7 +32,7 @@
                             <a href="EditResult.aspx?ID=<%#:Item.ResultsID %>"><%#:Item.ResultsID %></a>
                         </td>
                         <td>
-                            <a href="EditResult.aspx?ID=<%#:Item.ResultsID %>"><%#:Item.StudentID %></a>
+                            <a href="EditResult.aspx?ID=<%#:Item.ResultsID %>"><%#:Item.StudentID.ToString("D8") %></a>
                         </td>
                         <td>
                             <a href="EditResult.aspx?ID=<%#:Item.ResultsID %>"><%#:Item.Unit.UnitCode %></a>
@@ -43,6 +46,9 @@
                         <td>
                             <%#:Item.Grade %>
                         </td>
+                        <td>
+                            <asp:Image runat="server" Height="50px" Width="50px" Visible=<%# Item.FileId != null ? true : false %> ImageUrl=<%#:Item.FilePath %>/>
+                        </td>
                     </tr>
                 </ItemTemplate>
                 <LayoutTemplate>
@@ -55,15 +61,22 @@
                             <th>Semester</th>
                             <th>Year</th>
                             <th>Grade</th>
+                            <th>Photo</th>
                         </tr>
                         </thead>
                         <tbody>
-                            <tr id="groupPlaceholder" runat="server">
-                            </tr>
+                        <tr id="groupPlaceholder" runat="server">
+                        </tr>
                         </tbody>
                     </table>
                 </LayoutTemplate>
             </asp:ListView>
+        </div>
+        <div>
+            <asp:Label runat="server" ID="ResultsLabel"></asp:Label>
+        </div>
+        <div>
+            <asp:Label runat="server" ID="GradeLabel"></asp:Label>
         </div>
     </section>
 </asp:Content>

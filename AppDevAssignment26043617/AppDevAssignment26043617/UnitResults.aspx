@@ -7,7 +7,10 @@
             <hgroup>
                 <h2><%: Page.Title %></h2>
             </hgroup>
-
+            
+            <div>
+                <h3><asp:Label runat="server" ID="UnitLabel"></asp:Label></h3>
+            </div>
             <asp:ListView ID="unitResultsView" runat="server"
                 DataKeyNames="UnitId" GroupItemCount="4"
                 ItemType="AppDevAssignment26043617.Models.Results" SelectMethod="GetResults">
@@ -79,6 +82,12 @@
                     </table>
                 </LayoutTemplate>
             </asp:ListView>
+        </div>
+        <div>
+            <asp:Label runat="server" ID="ResultsLabel"></asp:Label>
+        </div>
+        <div>
+            <asp:Label runat="server" ID="GradeLabel"></asp:Label>
         </div>
     </section>
 </asp:Content>

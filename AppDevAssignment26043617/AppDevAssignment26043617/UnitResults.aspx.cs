@@ -13,7 +13,25 @@ namespace AppDevAssignment26043617
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            var _db = new ApplicationDbContext();
 
+            var unitId = Request.QueryString["id"].ToInteger();
+
+            var unit = _db.Units.FirstOrDefault(x => x.UnitId == unitId);
+
+            if (unit == null)
+            {
+                Response.Redirect("ViewReports.aspx");
+                return;
+            }
+
+            UnitLabel.Text = $"{unit.UnitCode}";
+
+            var data = GetResults(unitId);
+
+            ResultsLabel.Text = $"Results: {data.Count}";
+            var avg = (int)Math.Round((double) data.Sum(x => x.UnitScore) / data.Count, 0);
+            GradeLabel.Text = $"Unit Avg: {avg} {Results.CalcGrade(avg)}";
         }
 
         public List<Results> GetResults([QueryString("id")] int? unitId)

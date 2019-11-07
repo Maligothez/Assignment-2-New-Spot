@@ -41,22 +41,21 @@ namespace AppDevAssignment26043617.Models
         [NotMapped] public int UnitScore => Assessment1Score + Assessment2Score + Exam;
 
         [NotMapped]
-        public string Grade
+        public string Grade => CalcGrade(UnitScore);
+
+        public static string CalcGrade(int score)
         {
-            get
+            if (score < 50)
+                return "N";
+            else if (score < 60)
+                return "P";
+            else if (score < 70)
+                return "Cr";
+            else if (score < 80)
+                return "D";
+            else
             {
-                if (UnitScore < 50)
-                    return "N";
-                else if (UnitScore < 60)
-                    return "P";
-                else if (UnitScore < 70)
-                    return "Cr";
-                else if (UnitScore < 80)
-                    return "D";
-                else
-                {
-                    return "HD";
-                }
+                return "HD";
             }
         }
 

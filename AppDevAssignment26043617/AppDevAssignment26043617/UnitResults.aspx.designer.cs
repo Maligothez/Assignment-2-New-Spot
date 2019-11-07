@@ -15,6 +15,15 @@ namespace AppDevAssignment26043617
     {
 
         /// <summary>
+        /// UnitLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label UnitLabel;
+
+        /// <summary>
         /// unitResultsView control.
         /// </summary>
         /// <remarks>
@@ -22,5 +31,23 @@ namespace AppDevAssignment26043617
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ListView unitResultsView;
+
+        /// <summary>
+        /// ResultsLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ResultsLabel;
+
+        /// <summary>
+        /// GradeLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label GradeLabel;
     }
 }
